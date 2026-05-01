@@ -1,0 +1,63 @@
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.fadeIn { animation: fadeUp 0.35s ease; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.label {
+  font-size: 10px; font-family: var(--mono);
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.75rem;
+}
+
+.summaryBox {
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex; gap: 8px;
+  padding: 7px 12px;
+  border-bottom: 0.5px solid var(--border);
+  font-size: 12px;
+}
+
+.row:last-child { border-bottom: none; }
+
+.key {
+  font-family: var(--mono); color: var(--text-muted);
+  min-width: 82px; font-size: 11px; flex-shrink: 0;
+}
+
+.val { color: var(--text-primary); font-weight: 500; flex: 1; text-transform: capitalize; }
+
+.actions { display: flex; gap: 8px; }
+
+.copyBtn {
+  flex: 1; padding: 8px;
+  border-radius: var(--radius-md);
+  font-size: 12px; font-weight: 500;
+  border: 0.5px solid var(--border-med);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: all 0.15s;
+}
+
+.copyBtn:hover { background: var(--bg-card); }
+
+.newCall {
+  background: var(--blue); color: #fff; border-color: var(--blue);
+}
+
+.newCall:hover { opacity: 0.85; }

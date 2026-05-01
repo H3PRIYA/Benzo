@@ -1,0 +1,159 @@
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.label {
+  font-size: 10px; font-family: var(--mono);
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 0.75rem;
+}
+
+.scenarios {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.scenarioBtn {
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 9px 11px;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.scenarioBtn:hover {
+  background: var(--bg-card);
+  border-color: var(--border-med);
+  box-shadow: var(--shadow-sm);
+}
+
+.scenarioBtn.active {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.scenarioLang {
+  font-size: 10px; font-family: var(--mono);
+  color: var(--blue); margin-bottom: 4px;
+}
+
+.scenarioText { font-size: 12px; color: var(--text-primary); line-height: 1.4; }
+
+/* ── Textarea ── */
+.textareaWrap { position: relative; margin-bottom: 8px; }
+
+.textarea {
+  width: 100%;
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 13px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  line-height: 1.55;
+}
+
+.textarea:focus { border-color: var(--blue); background: var(--bg-card); }
+.textarea::placeholder { color: var(--text-hint); font-size: 12px; }
+
+.textarea.recording {
+  border-color: var(--red);
+  background: #fff9f9;
+  animation: borderPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+  0%, 100% { border-color: var(--red); }
+  50%       { border-color: rgba(163,45,45,0.35); }
+}
+
+.listeningBadge {
+  position: absolute; top: 8px; right: 10px;
+  display: flex; align-items: center; gap: 5px;
+  font-size: 10px; font-family: var(--mono);
+  color: var(--red);
+  background: var(--red-light);
+  border: 0.5px solid rgba(163,45,45,0.3);
+  border-radius: 20px;
+  padding: 3px 9px;
+  pointer-events: none;
+}
+
+.listeningDot {
+  width: 6px; height: 6px;
+  border-radius: 50%; background: var(--red);
+  animation: blink 0.9s ease-in-out infinite;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+/* ── Actions ── */
+.actions { display: flex; align-items: center; gap: 8px; }
+
+.micBtn {
+  width: 38px; height: 38px; flex-shrink: 0;
+  border: 0.5px solid var(--border-med);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.micBtn:hover { background: var(--bg-card); color: var(--blue); border-color: var(--blue); }
+
+.micBtn.micActive {
+  background: var(--red-light);
+  border-color: var(--red);
+  color: var(--red);
+  animation: micPulse 1s ease-in-out infinite;
+}
+
+@keyframes micPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(163,45,45,0.3); }
+  50%       { box-shadow: 0 0 0 5px rgba(163,45,45,0); }
+}
+
+.analyzeBtn {
+  flex: 1;
+  padding: 10px 20px;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: opacity 0.15s, transform 0.1s;
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+}
+
+.analyzeBtn:hover:not(:disabled) { opacity: 0.88; }
+.analyzeBtn:active:not(:disabled) { transform: scale(0.98); }
+.analyzeBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.spinner {
+  display: inline-block;
+  width: 13px; height: 13px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.micWarning {
+  margin-top: 8px;
+  font-size: 11px; font-family: var(--mono);
+  color: var(--amber); background: var(--amber-light);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+}

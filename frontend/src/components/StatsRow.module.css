@@ -1,0 +1,13 @@
+.row { display: flex; gap: 8px; }
+
+.chip {
+  flex: 1; text-align: center;
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.num { font-size: 18px; font-weight: 700; line-height: 1.2; }
+.lbl { font-size: 10px; font-family: var(--mono); color: var(--text-muted); margin-top: 3px; }

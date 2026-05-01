@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.logo { display: flex; align-items: center; gap: 12px; }
+
+.badge {
+  width: 40px; height: 40px;
+  background: var(--blue);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(24,95,165,0.35);
+  flex-shrink: 0;
+}
+
+.logoText  { font-size: 22px; font-weight: 700; letter-spacing: 3px; }
+.logoSub   { font-size: 11px; font-family: var(--mono); color: var(--text-muted); }
+
+.right { display: flex; align-items: center; gap: 10px; }
+
+.statusPill {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-family: var(--mono); font-weight: 500;
+  color: var(--teal);
+  background: var(--teal-light);
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(29,158,117,0.25);
+  transition: all 0.2s;
+}
+
+.statusPill[data-error='true'] {
+  color: var(--red);
+  background: var(--red-light);
+  border-color: rgba(163,45,45,0.25);
+}
+
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.statusPill[data-error='true'] .dot { background: var(--red); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.82); }
+}
+
+.counter {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 4px 14px;
+}
+
+.counterNum   { font-size: 17px; font-weight: 700; line-height: 1.2; }
+.counterLabel { font-size: 10px; font-family: var(--mono); color: var(--text-muted); }

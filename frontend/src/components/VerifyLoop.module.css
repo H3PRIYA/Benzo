@@ -1,0 +1,123 @@
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.fadeIn { animation: fadeUp 0.35s ease; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.label {
+  font-size: 10px; font-family: var(--mono);
+  letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 0.75rem;
+}
+
+/* ── High confidence: verification box ── */
+.verifyBox {
+  background: var(--blue-light);
+  border: 1px solid rgba(24,95,165,0.28);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.verifyHeader {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+
+.verifyIcon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--blue); color: #fff;
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+.verifyTitle { font-size: 12px; font-family: var(--mono); color: var(--blue); }
+
+.verifyQ {
+  font-size: 14px; color: var(--text-primary);
+  line-height: 1.55; margin-bottom: 12px;
+}
+
+.verifyActions { display: flex; gap: 8px; }
+
+.btn {
+  padding: 8px 18px; border-radius: var(--radius-md);
+  font-size: 12px; font-weight: 500; border: 1px solid;
+  transition: all 0.15s;
+}
+
+.yes { background: var(--teal); border-color: var(--teal); color: #fff; }
+.yes:hover { opacity: 0.82; }
+
+.no  { background: transparent; border-color: var(--blue); color: var(--blue); }
+.no:hover { background: rgba(24,95,165,0.08); }
+
+/* ── Confirmed ── */
+.confirmedBox {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--teal-light);
+  border: 1px solid rgba(29,158,117,0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 13px; color: var(--teal);
+}
+
+.checkIcon { font-size: 16px; font-weight: 700; }
+
+/* ── Adaptive (rejected / medium) ── */
+.adaptiveBox {
+  display: flex; gap: 10px;
+  background: var(--amber-light);
+  border: 1px solid rgba(186,117,23,0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.adaptiveIcon {
+  font-size: 18px; color: var(--amber); flex-shrink: 0; margin-top: 1px;
+}
+
+.adaptiveTitle {
+  font-size: 11px; font-family: var(--mono);
+  color: var(--amber); margin-bottom: 6px;
+}
+
+.adaptiveQ { font-size: 13px; color: var(--text-primary); line-height: 1.5; }
+
+.mediumBox {
+  background: var(--amber-light);
+  border: 1px solid rgba(186,117,23,0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.mediumHeader { margin-bottom: 8px; }
+
+.mediumBadge {
+  font-size: 11px; font-family: var(--mono); font-weight: 500;
+  color: var(--amber);
+}
+
+/* ── Low confidence / escalation ── */
+.lowBox {
+  background: var(--red-light);
+  border: 1px solid rgba(163,45,45,0.3);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.lowHeader { margin-bottom: 8px; }
+
+.lowBadge {
+  font-size: 11px; font-family: var(--mono); font-weight: 500;
+  color: var(--red);
+}
+
+.lowText { font-size: 12px; color: var(--text-primary); line-height: 1.55; }
