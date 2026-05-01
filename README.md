@@ -5,18 +5,7 @@
 
 ---
 
-## ⚡ Quick Setup (5 minutes)
-
 ### Step 1 — Get your Groq API Key
-
-1. Go to **https://console.groq.com**
-2. Sign up or log in with your email
-3. Click **"API Keys"** in the left sidebar
-4. Click **"Create Key"** → give it a name like "BENZO"
-5. Copy the key — it starts with `gsk_...`
-6. **Keep it secret** — never share it or commit it to GitHub
-
-> 💡 New accounts get free credits ($5–10) to start. That's enough for hundreds of test calls.
 
 ---
 
